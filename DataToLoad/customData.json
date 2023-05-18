@@ -1,0 +1,3 @@
+{
+    "SecretButton": {"Title" : "Popup title", "Buttons": ["That's Cool!", "OK"], "Description" : "This text was loaded from a json file!"}
+}
