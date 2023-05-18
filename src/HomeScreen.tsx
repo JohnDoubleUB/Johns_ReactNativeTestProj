@@ -97,6 +97,11 @@ export default function HomeScreen({ navigation, route }: Props): JSX.Element
         </Pressable>
         <Pressable
           style={[styles.button, styles.buttonOpen]}
+          onPress={() => navigation.navigate('LightScreen')}>
+          <Text style={styles.addButtonTextStyle}>Go to Light</Text>
+        </Pressable>
+        <Pressable
+          style={[styles.button, styles.buttonOpen]}
           onPress={() =>
             navigation.navigate('Dice Roller', { name: 'd6', sides: 6 })}>
           <Text style={styles.addButtonTextStyle}>Go To Dice roller</Text>

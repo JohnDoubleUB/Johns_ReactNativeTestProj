@@ -7,12 +7,14 @@ import DetailsScreen from './src/DetailsScreen';
 import DiceRollerScreen from './src/DiceRollerScreen';
 import IngredientsScreen from './src/IngredientsScreen';
 import AuthContextProvider from './context/auth-context';
+import LightScreen from './src/LightScreen';
 
 export type RootStackParamList = {
 	Home: { post: number; };
 	'Dice Roller': { name: string; sides: number; };
 	Details: { depth: number; };
 	Ingredients: undefined;
+	LightScreen: undefined;
 };
 
 const customData = require('./DataToLoad/customData.json');
@@ -90,6 +92,7 @@ function App(): JSX.Element
 						})}
 						initialParams={{ name: 'd6', sides: 6 }} />
 					<Stack.Screen name="Ingredients" component={IngredientsScreen} />
+					<Stack.Screen name="LightScreen" component={LightScreen} />
 				</Stack.Navigator>
 			</AuthContextProvider>
 		</NavigationContainer>
